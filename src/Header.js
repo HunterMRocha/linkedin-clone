@@ -7,14 +7,15 @@ import NotificationIcon from '@mui/icons-material/Notifications';
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import HeaderOption from './HeaderOption';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { auth } from './firebase';
-import { logout } from "./features/userSlice";
+import { logout, selectUser } from "./features/userSlice";
 
 
 function Header() {
 
 	const dispatch = useDispatch();
+	const user = useSelector(selectUser);
 
 	const logoutOfApp = () => {
 		dispatch(logout())

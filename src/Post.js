@@ -9,6 +9,8 @@ import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import InputOption from "./InputOption";
 
 function Post( { name, description, message, photoUrl} ) {
+
+
   return (
     <div className="post">
         <div className="post__header"> 
