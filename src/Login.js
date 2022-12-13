@@ -50,7 +50,7 @@ function login() {
                         displayName: name, 
                         photoURL: profilePic
                     })
-                );
+                ); 
             }).catch(error => alert(error));     
         })};
 
@@ -87,7 +87,7 @@ function login() {
                     onChange={e => setPassword(e.target.value)}
                     placeholder="Password" 
                     type="password"></input>
-                <button type="submit">Sign In</button>
+                <button onClick={loginToApp} type="submit">Sign In</button>
             </form>
             <p>Not a member? 
                 <span className="login__register" onClick={register}> Register Now</span>
