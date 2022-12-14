@@ -9,13 +9,13 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import HeaderOption from './HeaderOption';
 import { useDispatch, useSelector } from 'react-redux';
 import { auth } from './firebase';
-import { logout, selectUser } from "./features/userSlice";
+import { logout } from "./features/userSlice";
 
 
 function Header() {
-
+	// const user = useSelector(selectUser);
 	const dispatch = useDispatch();
-	const user = useSelector(selectUser);
+
 
 	const logoutOfApp = () => {
 		dispatch(logout())
@@ -42,8 +42,8 @@ function Header() {
 			<HeaderOption Icon={ChatIcon} title="Messaging" />
 			<HeaderOption Icon={NotificationIcon} title="Notifications" />
 			<HeaderOption 
-				avatar="https://pbs.twimg.com/profile_images/1597756795598307328/M1tDVxEK_400x400.jpg" 
-				title="me"
+				avatar={true}
+				title={"me"}
 				onClick={logoutOfApp}
 				/>
         </div>
