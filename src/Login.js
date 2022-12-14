@@ -72,7 +72,7 @@ function login() {
                 <input 
                     value={profilePic}
                     onChange={e => setProfilePic(e.target.value)}
-                    placeholder="Profile Picture URL" 
+                    placeholder={name[0]}
                     type="text"> 
                 </input>
                 <input 
